@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% if page.id != "home" and page.id != "not-found" %}
+    <nav>{% include bio.html %}</nav>
+    {% endif %}
+    <div class="wrapper">
+      <main>{{ content }}</main>
+      {% if page.id != "home" and page.id != "not-found" %}
+      {% include footer.html %}
+      {% endif %}
+    </div>
+    {% include feet.html %}
+  </body>
+</html>

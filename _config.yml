@@ -1,0 +1,32 @@
+name:                Maxime Vaillancourt
+title:               Maxime Vaillancourt
+url:                 https://www.maximevaillancourt.com
+enforce_ssl:         www.maximevaillancourt.com
+baseurl:             ""
+include:             ['_pages']
+
+permalink:           /blog/:slug
+relative_permalinks: false
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-last-modified-at
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:path
+
+defaults:
+  - scope:
+      path: "**/*"
+    values:
+      layout: "default"
+  - scope:
+      path: "_notes/**/*.md"
+    values:
+      layout: "note"

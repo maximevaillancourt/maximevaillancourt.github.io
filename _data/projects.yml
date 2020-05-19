@@ -1,0 +1,14 @@
+- name: Freshreader
+  description_html: "Read-it-later service with a twist: saved content disappears after 7 days"
+  url: https://freshreader.app
+  date: 2020-03-14
+
+- name: Trace
+  description_html: Supply chain transparency platform PoC based on the Ethereum blockchain
+  url: https://github.com/maximevaillancourt/trace
+  date: 2018-02-01
+
+- name: JSON Feed Viewer
+  description_html: The world's first JSON feed viewer, as seen on <a target="_blank" rel="noopener" href="https://daringfireball.net/linked/2017/05/18/maxime-vaillancourt-json-feed-viewer">Daring Fireball</a>
+  url: https://github.com/maximevaillancourt/json-feed-viewer
+  date: 2017-05-01
