@@ -5,6 +5,7 @@ slug: "why-i-use-a-thinkpad-x220-in-2019"
 redirect_from:
   - "/why-i-use-a-thinkpad-x220-in-2019"
 excerpt: Extensibility, compatibility, and reliability.
+image: /assets/x220-full.png
 ---
 
 **Update (2020-05-18)**: I've since switched to a more powerful desktop computer for my photography business. I still use the X220 as a dedicated machine to connect with Zwift, a social cycling app. 🚴

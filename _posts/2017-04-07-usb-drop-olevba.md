@@ -7,6 +7,7 @@ redirect_from:
   - "/usb-drop-olevba/"
   - "/en/usb-drop-olevba/"
 excerpt: Or, "why you shouldn't pick up random USB keys".
+image: https://cdn-images-1.medium.com/max/800/1*r8-nLE9X_-HqKsiQ3w6u1w.png
 ---
 
 ![](https://cdn-images-1.medium.com/max/800/1*r8-nLE9X_-HqKsiQ3w6u1w.png)

@@ -5,6 +5,7 @@ slug: "sleep-activation-energy"
 redirect_from:
   - "/sleep-activation-energy"
 excerpt: Parallels between chemistry and the human mind.
+image: /assets/energy.svg
 ---
 
 I noticed something noteworthy a few weeks ago.

@@ -6,6 +6,7 @@ redirect_from:
   - "/sherbylove"
   - "/en/sherbylove/"
 excerpt: The beginning of a new adventure, and a new home.
+image: https://i.imgur.com/5AUVMBD.gif
 ---
 
 <p>Just a few months ago, I arrived at my first apartment with my roommates. I was becoming an <em>adult</em>. It's only yesterday however that I realized something: Sherbrooke is now what I consider to be home.</p>

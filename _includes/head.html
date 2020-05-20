@@ -60,7 +60,11 @@
   {% endif %}
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+    {% if page.image contains "https://" %}
+      <meta property="og:image" content="{{ page.image }}">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+    {% endif %}
   {% endif %}
 
   <title>

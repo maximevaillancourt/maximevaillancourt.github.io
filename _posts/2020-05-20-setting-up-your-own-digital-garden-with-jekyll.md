@@ -3,6 +3,7 @@ title: Setting up your own digital garden with Jekyll 🌱
 layout: post
 slug: "setting-up-your-own-digital-garden-with-jekyll"
 excerpt: Carve out your own space where you'll seed, cross-pollinate, and grow ideas.
+image: https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png
 ---
 
 Digital gardens and public note-taking spaces are [all the rage these days](https://twitter.com/ness_labs/status/1262778800649187330), as they're a great way to foster an environment where ideas mesh together and others can take inspiration from. You can set up a digital garden of your own in a few minutes, and have your own personal corner of the Internet where you'll seed and grow ideas.
