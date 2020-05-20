@@ -21,7 +21,7 @@ permalink: /
 
   <div class="grid">
     <div class="grid-element">
-      <b>Writing 📝</b>
+      <b>Blog 📝</b>
       {% assign post_limit = 5 %}
       {% for post in site.posts limit: post_limit %}
         {% assign currentdate = post.date | date: "%B %Y" %}
