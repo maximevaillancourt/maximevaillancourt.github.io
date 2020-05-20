@@ -11,4 +11,4 @@ The same is valid in other disciplines: as a software developer, I keep facing r
 
 As a photographer, the process of culling pictures after an event is not particularly enjoyable (if only for the act of identifying the "money shots"): yet, the process takes less and less time with every event I document.
 
-In any case, [know that everyone has to start somewhere](/notes/everyone-has-to-start-somewhere).
+In any case, [know that everyone has to start somewhere](/notes/everyone-has-to-start-somewhere){: .internal-link}.
