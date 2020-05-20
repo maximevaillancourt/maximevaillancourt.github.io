@@ -62,7 +62,7 @@ permalink: /
       <b>Notes 📘</b>
       <p class="sub">I'm experimenting with maintaining a public graph of notes to foster an environment where thoughts collide, in a way that I can build upon the combination of ideas.</p>
 
-      {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort:"path" %}
+      {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "date" | reverse %}
       {% for entry in notes limit:10 %}
         {% unless entry.path contains "index.md" or entry.path contains "index.html" %}
           {% assign currentdate = entry.last_modified_at | date: "%B %Y" %}
