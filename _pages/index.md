@@ -22,7 +22,7 @@ permalink: /
   <div class="grid">
     <div class="grid-element">
       <b>Blog 📝</b>
-      {% assign post_limit = 5 %}
+      {% assign post_limit = 6 %}
       {% for post in site.posts limit: post_limit %}
         {% assign currentdate = post.date | date: "%B %Y" %}
         {% if currentdate != date %}
@@ -63,14 +63,17 @@ permalink: /
       <p class="sub">I'm experimenting with maintaining a public graph of notes to foster an environment where thoughts collide, in a way that I can build upon the combination of ideas.</p>
 
       {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "date" | reverse %}
-      {% for entry in notes limit:10 %}
+      {% for entry in notes limit:3 %}
         {% unless entry.path contains "index.md" or entry.path contains "index.html" %}
           {% assign currentdate = entry.last_modified_at | date: "%B %Y" %}
           {% if currentdate != date %}
             {% assign date = currentdate %}
-            <div class="super">Last modified in {{ date }}</div>
+            <div class="super">Last updated in {{ date }}</div>
           {% endif %}
-            <div><a class="internal-link" href="{{ entry.url }}">{{entry.title | replace: '_notes', '/notes' }}</a></div>
+          <div class="blog-entry">
+            <a class="internal-link" href="{{ entry.url }}">{{entry.title | replace: '_notes', '/notes' }}</a>
+            <div class="sub">{{ entry.excerpt | strip_html }}</div>
+          </div>
         {% endunless %}
       {% endfor %}
     </div>
