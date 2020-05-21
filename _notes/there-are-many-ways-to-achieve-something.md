@@ -6,7 +6,7 @@ Stop trying to find the perfect solution: you'll only find yourself wasting your
 
 When I started programming, especially in university classes, I first had the mindset that there was only a single solution to a given problem, kind of like a mathematics problem where there is only one solution to `2 + 2`, and that it was my job to find that perfect solution.
 
-Don't fret. [You just need to start somewhere](/notes/everyone-has-to-start-somewhere){: .internal-link}, and go from there.
+Don't fret. [You just need to start somewhere](/notes/everyone-has-to-start-somewhere){: .internal-link}, and go from there. [Explore the unknown](/notes/explore-the-unknown){: .internal-link}.
 
 Otherwise, we fall in this "all-or-nothing" mindset, and it took me (too) many years to accept that this is almost never a good way to see the world.
 
