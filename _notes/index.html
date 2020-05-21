@@ -7,13 +7,16 @@
 </div>
 
 {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "date" | reverse %}
-{% for note in notes %}
-  {% unless note.path contains "index.md" or note.path contains "index.html" %}
-    {% assign currentdate = note.last_modified_at | date: "%B %Y" %}
+{% for entry in notes %}
+  {% unless entry.path contains "index.md" or entry.path contains "index.html" %}
+    {% assign currentdate = entry.last_modified_at | date: "%B %Y" %}
     {% if currentdate != date %}
       {% assign date = currentdate %}
-      <div class="super">Last modified in {{ date }}</div>
+      <div class="super">Last updated in {{ date }}</div>
     {% endif %}
-      <div><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></div>
+    <div class="blog-entry">
+      <a class="internal-link" href="{{ entry.url }}">{{entry.title | replace: '_notes', '/notes' }}</a>
+      <div class="sub">{{ entry.excerpt | strip_html }}</div>
+    </div>
   {% endunless %}
 {% endfor %}
