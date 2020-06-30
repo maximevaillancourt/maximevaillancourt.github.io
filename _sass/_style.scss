@@ -119,8 +119,12 @@ blockquote {
   background: #f8f8f8;
   color: #333;
 
-  p {
-    margin: 0;
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
