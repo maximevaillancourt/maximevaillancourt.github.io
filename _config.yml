@@ -1,7 +1,7 @@
 name:                Maxime Vaillancourt
 title:               Maxime Vaillancourt
-url:                 https://www.maximevaillancourt.com
-enforce_ssl:         www.maximevaillancourt.com
+url:                 https://maximevaillancourt.com
+enforce_ssl:         maximevaillancourt.com
 baseurl:             ""
 include:             ['_pages']
 
