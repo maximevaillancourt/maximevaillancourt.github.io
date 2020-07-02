@@ -48,13 +48,22 @@ permalink: /
 
     <div class="grid-element">
       <b>Side projects 👨‍💻</b>
-      {% for project in site.data.projects %}
+
+      {% assign project_limit = 2 %}
+      {% for project in site.data.projects limit: project_limit %}
       <div class="super">{{ project.date | date: "%B %Y" }}</div>
       <div class="blog-entry">
         <div><a target="_blank" rel="noopener" href="{{ project.url }}">{{ project.name }}</a></div>
         <div class="sub">{{ project.description_html }}</div>
       </div>
       {% endfor %}
+      <div class="sub">
+        <p>
+          <a class="internal-link" href="/projects">
+            View all projects ({{ site.data.projects.size | minus: project_limit }} more projects)
+          </a>
+        </p>
+      </div>
 
       <br>
 
