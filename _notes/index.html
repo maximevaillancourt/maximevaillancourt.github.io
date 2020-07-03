@@ -6,6 +6,7 @@
   <p>I'm experimenting with maintaining a public graph of notes to foster an environment where thoughts collide, in a way that I can build upon the combination of ideas. Kind of like a digital garden, with small seedlings that eventually grow into mature trees. 🌱</p>
 </div>
 
+<div>
 {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "date" | reverse %}
 {% for entry in notes %}
   {% unless entry.path contains "index.md" or entry.path contains "index.html" %}
@@ -20,3 +21,6 @@
     </div>
   {% endunless %}
 {% endfor %}
+</div>
+
+{% include notes_graph.html %}
