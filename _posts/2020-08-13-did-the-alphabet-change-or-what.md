@@ -168,16 +168,16 @@ Okay. So far so good. This lines up with the initial observation of the issue. H
 We do almost the same setup as above (same one-line Ruby script to replicate the issue, same breakpoint on `str_casecmp`), but we fire up GDB with Ruby 2.6.6:
 
 ```sh
-$ sudo gdb /Users/maximevaillancourt/.rubies/ruby-2.7.0/bin/ruby
-Reading symbols from /Users/maximevaillancourt/.rubies/ruby-2.7.0/bin/ruby...
+$ sudo gdb /Users/maximevaillancourt/.rubies/ruby-2.6.6/bin/ruby
+Reading symbols from /Users/maximevaillancourt/.rubies/ruby-2.6.6/bin/ruby...
 
 (gdb) break str_casecmp
-Breakpoint 1 at 0x1001fa766: file string.c, line 3371.
+...
 
 (gdb) run casecmp.rb
-Starting program: /Users/maximevaillancourt/.rubies/ruby-2.7.0/bin/ruby casecmp.rb
+Starting program: /Users/maximevaillancourt/.rubies/ruby-2.6.6/bin/ruby casecmp.rb
 
-Thread 2 hit Breakpoint 1, str_casecmp (str1=4329352680, str2=4329352640) at string.c:3371
+Thread 2 hit Breakpoint 1, str_casecmp ...
 ```
 
 Let's look at the loop we presented above in Ruby 2.7.0, but [in Ruby 2.6.6](https://github.com/ruby/ruby/blob/a9a48e6a741f048766a2a287592098c4f6c7b7c7/string.c#L3413-L3414) this time:
