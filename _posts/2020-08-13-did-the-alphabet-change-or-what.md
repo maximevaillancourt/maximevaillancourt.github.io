@@ -133,7 +133,7 @@ while (p1 < p1end && p2 < p2end) {
 }
 ```
 
-After navigating in `str_casecmp` using `next` a few times, we arrive at a point where we can print `c1` and `c2`, which are the codes for the characters at the current index for both inputs:
+After navigating in `str_casecmp` using `next` a few times, we enter the loop and arrive at a point where we can print `c1` and `c2`, which are the codes for the characters at the current index for both inputs:
 
 ```
 3382	                unsigned int c2 = TOLOWER(*p2 & 0xff);
@@ -145,9 +145,23 @@ $11 = 108
 $12 = 108
 ```
 
+Here's a visual representation of the buffers:
+
+```
+c1
+ ↓
+108  ?   ?   ?
+ l   u   c   k
+
+108  ?   ?   ?   ?   ?   ?   ?   ?
+ l   `   a   u   g   u   s   t   e
+ ↑
+c2
+```
+
 108 is the decimal ASCII character code representation for the first letter of both inputs: `l` (lowercase "L"), so the loop continues to the next iteration because `c1` and `c2` are the same.
 
-This time, we get the following results:
+On the second iteration of the loop (on the second character of both inputs), we get the following results:
 
 ```
 3382	                unsigned int c2 = TOLOWER(*p2 & 0xff);
@@ -157,6 +171,20 @@ $14 = 117
 3383	                if (c1 != c2)
 (gdb) print c2
 $16 = 96
+```
+
+Here's a visual representation of the buffers:
+
+```
+    c1
+     ↓
+108 117  ?   ?
+ l   u   c   k
+
+108  96  ?   ?   ?   ?   ?   ?   ?
+ l   `   a   u   g   u   s   t   e
+     ↑
+     c2
 ```
 
 `c1` contains `117`, which is the decimal ASCII character code representation for `u`, while `96` (in `c2`) is the character code for a backtick (`` ` ``). We then enter the `if (c1 != c2)` conditional, and the return value is `1` because `c1 > c2` (`117 > 96`).
@@ -207,6 +235,20 @@ Let's fast-forward to the part where we get to `c1` and `c2` for the second char
 $5 = 85
 (gdb) print c2
 $6 = 96
+```
+
+Here's a visual representation of the buffers:
+
+```
+     c1
+     ↓
+108  85  ?   ?
+ L   U   C   K
+
+108  96  ?   ?   ?   ?   ?   ?   ?
+ L   `   A   U   G   U   S   T   E
+     ↑
+     c2
 ```
 
 `c1` is `85`, which is the character code for `U`, and `c2` is `96` (just like in Ruby 2.7.0), which is the character code for a backtick (`` ` ``).
