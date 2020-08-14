@@ -20,7 +20,7 @@ Executing ``"luck".casecmp("L`auguste")`` in application A returned `-1`, while 
 
 > **Aside**
 > 
-> [`String#casecmp`](https://ruby-doc.org/core-2.7.1/String.html#method-i-casecmp) is a built-in Ruby method that "returns -1, 0, +1, or nil depending on whether the object on which it's called is less than, equal to, or greater than the function argument", and it does so in case-insensitive fashion. Here are a few simple examples of how it behaves:
+> [`String#casecmp`](https://ruby-doc.org/core-2.7.1/String.html#method-i-casecmp) is a built-in Ruby method that returns `-1`, `0`, `1`, or `nil` depending on whether the object on which it's called is less than, equal to, or greater than the function argument, and it does so in case-insensitive fashion. Here are a few simple examples of how it behaves:
 > 
 > ```rb
 > "aBcDeF".casecmp("abcde")     #=> 1
