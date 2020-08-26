@@ -263,4 +263,4 @@ To summarize, the root cause of the issue is that `String#casecmp` was updated i
 
 Fun debugging session. :)
 
-_Found a typo? Think I could clarify something? Reach out on Twitter ([@vaillancourtmax](https://twitter.com/vaillancourtmax))._
+Found a typo? Think I could clarify something? Reach out on Twitter ([@vaillancourtmax](https://twitter.com/vaillancourtmax)).
