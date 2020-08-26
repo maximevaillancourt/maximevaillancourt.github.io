@@ -1,7 +1,7 @@
 $primary-color: #463ad9;
 $font-family-sans: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 $font-family-serif: $font-family-sans;
-$font-family-mono: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+$font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 
 img.profile {
   border-radius: 100%;
@@ -208,4 +208,5 @@ nav {
 
 code, kbd, samp {
   font-size: 0.9em;
+  font-family: $font-family-mono;
 }
