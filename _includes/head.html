@@ -8,7 +8,11 @@
 
   <meta charset="UTF-8">
 
+  {% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}" />
+  {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  {% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
