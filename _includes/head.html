@@ -1,11 +1,4 @@
 <head>
-  {% capture styles %}
-  {% include main.scss %}
-  {% endcapture %}
-  <style>
-    {{ styles | scssify }}
-  </style>
-
   <meta charset="UTF-8">
 
   {% if page.canonical_url %}
@@ -21,6 +14,8 @@
   <meta property="og:site_name" content="{{ site.title }}">
 
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+
+  <link rel="stylesheet" href="/styles.css">
 
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
