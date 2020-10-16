@@ -20,7 +20,7 @@ Here's how my inbox looks like with automatic labeling set up:
 
 ![](/assets/github-labels.png)
 
-Pretty neat, right? Thanks for these labels, I'm able to quickly parse through emails and reach inbox zero every day.
+Pretty neat, right? Thanks to these labels, I'm able to quickly parse through emails and reach inbox zero every day.
 
 Let's see how to implement this solution with Gmail.
 
