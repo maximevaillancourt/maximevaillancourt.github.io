@@ -4,6 +4,7 @@ url:                 https://maximevaillancourt.com
 enforce_ssl:         maximevaillancourt.com
 baseurl:             ""
 include:             ['_pages']
+exclude:             ['_includes/notes_graph.json']
 
 permalink:           /blog/:slug
 relative_permalinks: false

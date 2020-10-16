@@ -1,3 +1,7 @@
+# The graph is generated at build time,
+# no need to check it into source control
+_includes/notes_graph.json
+
 _site/
 .sass-cache/
 .jekyll-cache/
