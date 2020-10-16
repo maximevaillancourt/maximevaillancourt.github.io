@@ -1,5 +1,5 @@
 ---
-title: Setting up your own digital garden with Jekyll 🌱
+title: Setting up your own digital garden with Jekyll
 layout: post
 slug: "setting-up-your-own-digital-garden-with-jekyll"
 excerpt: Carve out your own space where you'll seed, cross-pollinate, and grow ideas.

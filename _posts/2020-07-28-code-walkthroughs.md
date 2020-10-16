@@ -1,5 +1,5 @@
 ---
-title: "Accelerating software onboarding with code walkthroughs 📌"
+title: "Accelerating software onboarding with code walkthroughs"
 layout: post
 slug: "code-walkthroughs"
 excerpt: Welcoming newcomers with high-quality, high-context code comments.
