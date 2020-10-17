@@ -47,6 +47,17 @@ permalink: /
     </div>
 
     <div class="grid-element">
+      <b>Podcast</b>
+      <div>
+        <audio data-theme="night" data-src="https://changelog.com/podcast/416/embed" src="https://cdn.changelog.com/uploads/podcast/416/the-changelog-416.mp3" preload="none" class="changelog-episode" controls></audio><p><a href="https://changelog.com/podcast/416">The Changelog 416: Shopify’s massive storefront rewrite</a> – Listen on <a href="https://changelog.com/">Changelog.com</a></p><script async src="//cdn.changelog.com/embed.js"></script>
+      </div>
+
+      <div>
+        <iframe src="https://anchor.fm/randomly-typed/embed/episodes/27---Dial-up-Modems-ebnvoq/a-a1o3hti" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <div class="grid-element">
       <b>Side projects 👨‍💻</b>
 
       {% assign project_limit = 2 %}
