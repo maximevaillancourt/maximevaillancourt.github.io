@@ -1,6 +1,7 @@
 $primary-color: blue;
 $font-family-mono: SFMono-Regular,Consolas,DejaVu Sans Mono,Liberation Mono,Menlo,monospace;
-$font-size: 14px;
+$font-size-desktop: 14px;
+$font-size-mobile: 12px;
 
 html {
   border-top: 5px solid $primary-color;
@@ -15,9 +16,12 @@ body {
   padding: 2em 2em;
   overflow-x: hidden;
   color: #333;
-  font-size: $font-size;
   max-width: 54em;
   margin: 0 auto;
+  font-size: $font-size-mobile;
+  @media (min-width: 820px) {
+    font-size: $font-size-desktop;
+  }
 }
 
 .faded {
@@ -63,7 +67,10 @@ img.profile {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-mono;
-  font-size: $font-size;
+  font-size: $font-size-mobile;
+  @media (min-width: 820px) {
+    font-size: $font-size-desktop;
+  }
   margin-top: 2em;
 }
 
