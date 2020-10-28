@@ -6,8 +6,6 @@ excerpt: Writing forces the mind to organize itself.
 image: https://images.unsplash.com/photo-1503944918282-d3a7844a9641?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
 ---
 
-![](https://images.unsplash.com/photo-1503944918282-d3a7844a9641?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
-
 6 years ago, I wrote a piece called "[Just Write](https://maximevaillancourt.com/blog/just-write){: .internal-link}", in which a younger version of myself explains how grabbing pen & paper and writing down the stream of thoughts going around in our minds helps clarify these thoughts into connected, organized concepts. Here's an excerpt:
 
 > Grab a pen. Write down everything that's on your mind.

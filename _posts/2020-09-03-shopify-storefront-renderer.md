@@ -7,7 +7,7 @@ image: "https://cdn.shopify.com/s/files/1/0779/4361/articles/sewing-digital-prod
 canonical_url: "https://engineering.shopify.com/blogs/engineering/how-shopify-reduced-storefront-response-times-rewrite"
 ---
 
-_This post [originally appeared on the Shopify Engineering blog](https://engineering.shopify.com/blogs/engineering/how-shopify-reduced-storefront-response-times-rewrite) on August 20, 2020_.
+This post [originally appeared on the Shopify Engineering blog](https://engineering.shopify.com/blogs/engineering/how-shopify-reduced-storefront-response-times-rewrite) on August 20, 2020.
 
 <img src="{{ page.image }}" />
 
@@ -81,14 +81,18 @@ _This post [originally appeared on the Shopify Engineering blog](https://enginee
 <p>We defined our “T” parameter as 200ms, which lines up with Google’s PageSpeed Insights recommendation for server response times. We consider server processing time below 200ms as satisfying and a server processing time of 800ms or more as frustrating. Anything in between is tolerated.</p>
 <p>From there, calculating the Apdex score for a given implementation consists of setting a time frame, and counting three values:</p>
 <ul>
-<li>N, the total number of responses in the defined time frame</li>
-<li>S, the number of satisfying responses (faster than 200ms) in the time frame</li>
-<li>T, the number of tolerated responses (between 200ms and 800ms) in the time frame</li>
+<li>n, the total number of responses in the defined time frame</li>
+<li>s, the number of satisfying responses (faster than 200ms) in the time frame</li>
+<li>t, the number of tolerated responses (between 200ms and 800ms) in the time frame</li>
 </ul>
 <p>Then, we calculate the Apdex score: </p>
 <meta charset="utf-8">
-<p><span>$$\frac{s\ +\ t/2}{n}$$</span></p>
-<p>By calculating Apdex scores for both the legacy and new implementations using the same T parameter, we had common ground to compare their performance.</p>
+
+```
+apdexScore = (s + t/2) / n
+```
+
+<p>By calculating Apdex scores for both the legacy and new implementations using the same t parameter, we had common ground to compare their performance.</p>
 <h2>Methods to improve server-side storefront performance</h2>
 <p>We want all Shopify storefronts to be fast, and this new implementation aims to speed up what a performance-conscious theme developer can’t by optimizing data access patterns, reducing memory allocations, and implementing efficient caching layers.</p>
 <h3>Optimizing data access patterns</h3>
@@ -124,3 +128,5 @@ _This post [originally appeared on the Shopify Engineering blog](https://enginee
 <p>We’re currently in the process of rolling out the new implementation to all online storefronts on the platform. This process happens automatically, without the need for any intervention from Shopify merchants. While we do this, we’re adding more features to the new implementation to bring it to full parity with the legacy implementation. The new implementation is currently at 90%+ feature parity with the legacy one, and we’re increasing that figure every day with the goal of reaching 100% parity to retire the legacy implementation.</p>
 <p>As we roll out the new implementation to storefronts we are continuing to see and measure performance improvements as well. On average, server response times for the new implementation are 4x faster than the legacy implementation. Rhone Apparel, a Shopify Plus merchant, started using the new implementation in April 2020 and <a href="https://www.shopify.com/enterprise/site-performance-page-speed-ecommerce#fast-ecommerce-platform-1" target="_blank" title="Improve Your Ecommerce Site Performance &amp; Speed to 2X Conversions" rel="noopener noreferrer">saw dramatic improvements in server-side performance over the previous month</a>.</p>
 <p>We learned a lot during the process of rewriting this critical piece of software. The strong foundations of this new implementation make it possible to deploy it around the world, closer to buyers everywhere, to reduce network latency involved in cross-continental networking, and we continue to explore ways to make it even faster while providing the best developer experience possible to set us up for the future.</p>
+
+*This blog post is **not** available under a Creative Commons license.*

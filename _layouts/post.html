@@ -1,45 +1,46 @@
 ---
 layout: default
 ---
-<style>body { max-width: 42em }</style>
+<style>
+  .post-wrapper {}
+</style>
 
-<article class="post">
-  <div class="post-heading">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{% if page.type != 'pages' %}
-      {{ page.date | date: "%B %-d, %Y" }}
-      {% endif %}
-    </time>
+<div class="post-wrapper">
+  <article class="post">
+    <div class="post-heading">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="faded">{% if page.type != 'pages' %}
+        {{ page.date | date: "%B %-d, %Y" }}
+        {% endif %}
+      </time>
+    </div>
+    {{ content }}
+  </article>
+
+  <br>
+
+  <h3>Recent posts</h3>
+
+  <div>
+    {% for post in site.posts limit: 3 %}
+    {% if post.url == page.url %}
+    {% continue %}
+    {% endif %}
+    <div class="list-entry">
+      <div><a class="internal-link" href="{{ post.url }}">{{ post.title }}</a> <span
+          class="faded">({{ post.date | date: "%Y-%m-%d" }})</span></div>
+      <div>{{ post.excerpt }}</div>
+    </div>
+    {% endfor %}
   </div>
-  {{ content }}
-</article>
 
-<br>
-
-<h3>Recent posts</h3>
-
-<div>
-  {% for recent_post in site.posts limit:3 %}
-    {% if recent_post.url == page.url %}
-      {% continue %}
-    {% endif %}
-    {% assign currentdate = recent_post.date | date: "%B %Y" %}
-    {% if currentdate != date %}
-      {% assign date = currentdate %}
-      <div class="super">{{ date }}</div>
-    {% endif %}
-      <div class="blog-entry">
-        <div><a class="internal-link" href="{{ recent_post.url }}">{{ recent_post.title }}</a></div>
-        <div class="sub">{{ recent_post.excerpt | strip_html }}</div>
-      </div>
-  {% endfor %}
+  <footer>
+    <div>Blog feed available as <a target="_blank" class="internal-link" href="/rss.xml">RSS</a> or <a target="_blank"
+        class="internal-link" href="/feed.json">JSON</a> feeds.</div>
+    <div class="social">
+      I'm also on
+      <a title='Twitter' target="_blank" rel="noreferrer" href="https://twitter.com/vaillancourtmax">Twitter</a> and
+      <a title='GitHub' target="_blank" rel="noreferrer" href="https://github.com/maximevaillancourt/">GitHub</a>.
+    </div>
+  </footer>
 </div>
-
-<footer class="sub">
-<div>Blog feed available as <a target="_blank" class="internal-link" href="/rss.xml">RSS</a> or <a target="_blank" class="internal-link" href="/feed.json">JSON</a> feeds.</div>
-<div class="social">
-  I'm also on
-  <a title='Twitter' target="_blank" rel="noreferrer" href="https://twitter.com/vaillancourtmax">Twitter</a> and
-  <a title='GitHub' target="_blank" rel="noreferrer" href="https://github.com/maximevaillancourt/">GitHub</a>.
-</div>
-</footer>

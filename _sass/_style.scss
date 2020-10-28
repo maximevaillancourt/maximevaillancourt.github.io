@@ -1,7 +1,28 @@
-$primary-color: #463ad9;
-$font-family-sans: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-$font-family-serif: $font-family-sans;
-$font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+$primary-color: blue;
+$font-family-mono: monospace;
+$font-size: 14px;
+
+html {
+  border-top: 5px solid $primary-color;
+  border-bottom: 5px solid $primary-color;
+}
+
+body {
+  box-sizing: content-box;
+  font-family: $font-family-mono;
+  margin: 0;
+  line-height: 1.7;
+  padding: 2em 2em;
+  overflow-x: hidden;
+  color: #333;
+  font-size: $font-size;
+  max-width: 54em;
+  margin: 0 auto;
+}
+
+.faded {
+  opacity: 0.6;
+}
 
 img.profile {
   border-radius: 100%;
@@ -11,12 +32,7 @@ img.profile {
 
 .post-title {
   margin-bottom: 0.2em;
-  font-family: $font-family-sans !important;
-}
-
-.post-date {
-  color: #555;
-  font-family: $font-family-sans;
+  font-family: $font-family-mono !important;
 }
 
 .flex {
@@ -35,22 +51,6 @@ img.profile {
   margin-bottom: 2em;
 }
 
-body {
-  box-sizing: content-box;
-  font-family: $font-family-sans;
-  margin: 0 auto;
-  line-height: 1.7;
-  padding: 4vh 6vw;
-  overflow-x: hidden;
-  color: #333;
-  font-size: 1rem;
-  max-width:63em;
-
-  @media (min-width: 820px) {
-    font-size: 1.2rem;
-  }
-}
-
 .overflow {
   width: 100vw;
   position: relative;
@@ -61,33 +61,18 @@ body {
   margin: 3em 0;
 }
 
-article.post {
-  font-family: $font-family-serif;
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-sans;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-mono;
+  font-size: $font-size;
+  margin-top: 2em;
 }
 
 footer {
-  margin: 4em 0 2em 0;
+  margin: 4em 0 0.5em 0;
 }
 
-.sub {
-  color: #555;
-  font-size: 0.8em;
-}
-
-.super {
-  color: #555;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-top: 2.25em;
-  margin-bottom: 0;
-}
-
-.blog-entry {
-  margin: 0.2em 0 0.8em;
+.list-entry {
+  margin: 1em 0 1em;
 }
 
 .spacer {
@@ -100,6 +85,7 @@ img {
   display: block;
   margin: 0 auto;
   max-height: 75vh;
+  border-radius: 4px;
 }
 
 .post-heading {
@@ -114,7 +100,6 @@ img {
 blockquote {
   padding: 1.75em;
   margin: 0 -1.75em;
-  font-size: 0.88em;
   background: #fff;
   color: #333;
   border: 1px solid #eee;
@@ -130,7 +115,6 @@ blockquote {
 }
 
 .caption {
-  font-size: 85%;
   color: #606060;
   margin-top: 1em;
   text-align: center;
@@ -141,7 +125,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.5em 0;
-  background: #cccccc;
+  background: #dddddd;
 }
 
 
@@ -162,7 +146,6 @@ a {
   &:after {
     position: relative;
     top: -0.5em;
-    font-size: 0.7em;
     content: "↗";
     color: #aaaaaa;
   }
@@ -198,7 +181,7 @@ nav {
 
 .grid {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem 2rem;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 }
 
@@ -207,6 +190,9 @@ nav {
 }
 
 code, kbd, samp {
-  font-size: 0.9em;
   font-family: $font-family-mono;
+}
+
+.grid-element {
+  margin: 4em 0;
 }

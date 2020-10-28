@@ -9,7 +9,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
 
   <meta property="og:site_name" content="{{ site.title }}">
 
@@ -18,9 +19,9 @@
   <link rel="stylesheet" href="/styles.css">
 
   {% if page.excerpt %}
-  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
   {% else %}
-  <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}"/>
+  <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}" />
   {% endif %}
 
   {% if page.title %}
@@ -52,18 +53,18 @@
   {% endif %}
 
   {% if page.image %}
-    {% if page.image contains "https://" %}
-      <meta property="og:image" content="{{ page.image }}">
-    {% else %}
-      <meta property="og:image" content="{{ site.url }}{{ page.image }}">
-    {% endif %}
+  {% if page.image contains "https://" %}
+  <meta property="og:image" content="{{ page.image }}">
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
   {% endif %}
 
   <title>
     {% if page.id == "home" %}
-      {{ site.title }}
+    {{ site.title }}
     {% else %}
-      {{ page.title }} &mdash; {{ site.title }}
+    {{ page.title }} &mdash; {{ site.title }}
     {% endif %}
   </title>
 
