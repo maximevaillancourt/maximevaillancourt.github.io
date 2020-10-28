@@ -6,8 +6,6 @@ excerpt: Debugging a weird Ruby string sorting issue with GDB.
 image: https://images.unsplash.com/photo-1522776851755-3914469f0ca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&h=500&q=80
 ---
 
-<img src="{{ page.image }}" />
-
 I noticed something odd today while working on two different Ruby codebases. This simple line of Ruby behaved differently in both applications:
 
 ```rb
@@ -61,13 +59,13 @@ Running this:
 $ ruby -r tracer -e '"luck".casecmp("L`Auguste")'
 ```
 
-... returns this output:
+returns this output:
 
 ```
 #0:-e:1::-: "luck".casecmp("L`Auguste")
 ```
 
-... and not much else. That's because `String#casecmp` is implemented in C, directly inside MRI's [`string.c`](https://github.com/ruby/ruby/blob/master/string.c), so there's no actual Ruby code underneath `String#casecmp` that we can step into using Ruby-level debugging tools.
+and not much else. That's because `String#casecmp` is implemented in C, directly inside MRI's [`string.c`](https://github.com/ruby/ruby/blob/master/string.c), so there's no actual Ruby code underneath `String#casecmp` that we can step into using Ruby-level debugging tools.
 
 Here comes the GDB part: because we're essentially dealing with C code at this point, we can use GDB to understand what happens inside the call to `String#casecmp`. So with that, I fired up GDB for the first time in years (I typically work with Ruby, so GDB is not something I commonly use).
 

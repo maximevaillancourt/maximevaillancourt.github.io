@@ -9,11 +9,11 @@ permalink: /projects
     <h1 class="post-title">All projects 👨‍💻</h1>
   </div>
 
-  {% for project in site.data.projects limit: project_limit %}
-  <div class="super">{{ project.date | date: "%B %Y" }}</div>
-  <div class="blog-entry">
+  {% for project in site.data.projects %}
+  <div>{{ project.date | date: "%B %Y" }}</div>
+  <div class="list-entry">
     <div><a target="_blank" rel="noopener" href="{{ project.url }}">{{ project.name }}</a></div>
-    <div class="sub">{{ project.description_html }}</div>
+    <div>{{ project.description_html }}</div>
   </div>
   {% endfor %}
 </div>
