@@ -79,7 +79,6 @@ permalink: /
 
     <div class="grid-element">
       <p><b>Notes 👨‍💻</b></p>
-
       {% include notes_graph.html %}
 
       {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "last_modified_at" | reverse %}
