@@ -77,21 +77,22 @@ permalink: /
       {% endif %}
     </div>
 
-    <!--
     <div class="grid-element">
       <p><b>Notes 👨‍💻</b></p>
 
+      {% include notes_graph.html %}
+
       {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "last_modified_at" | reverse %}
-      {% assign notes_limit = 4 %}
+      {% assign notes_limit = 5 %}
       {% for entry in notes limit: notes_limit %}
       {% unless entry.path contains "index.md" or entry.path contains "index.html" %}
       <div class="list-entry">
-        <div><a href="{{ entry.url }}">{{ entry.title }}</a> <span class="faded">({{ entry.last_modified_at | date: "%Y-%m-%d" }})</span></div>
+        <div><a class="internal-link" href="{{ entry.url }}">{{ entry.title }}</a> <span class="faded">({{ entry.last_modified_at | date: "%Y-%m-%d" }})</span></div>
       </div>
       {% endunless %}
       {% endfor %}
 
-      {% assign additional_notes = notes.size | minus: notes_limit %}
+      {% assign additional_notes = notes.size | minus: notes_limit | minus: 1 %}
       {% if additional_notes > 0 %}
       <div>
         <p>
@@ -102,6 +103,5 @@ permalink: /
       </div>
       {% endif %}
     </div>
-    -->
   </div>
 </div>

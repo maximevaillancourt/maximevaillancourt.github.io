@@ -39,24 +39,22 @@ layout: default
 
     <side style="font-size: 0.9em">
       {% if page.backlinks.size > 0 %}
-      <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
+      <div style="font-weight: bold; margin-top: 0; margin-bottom: 1em">Backlinks</div>
       <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
         {% for backlink in page.backlinks %}
         <div style="background: #f5f7ff; padding: 1em; border-radius: 3px;">
           <a class="internal-link" href="{{ backlink.url }}">{{ backlink.title }}</a><br>
-          <div style="font-size: 0.9em">{{ backlink.excerpt | strip_html | truncatewords: 20 }}</div>
         </div>
         {% endfor %}
       </div>
       {% else %}
-      <h3 style="margin-bottom: 1em">Recently updated notes</h3>
+      <div style="font-weight: bold; margin-top:0; margin-bottom: 1em">Backlinks</div>
       <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
         {% assign notes = site.notes | where_exp: "item", "item.path contains 'notes'" | sort: "date" | reverse %}
         {% for note in notes limit:3 %}
         {% unless note.path contains "index.md" or note.path contains "index.html" %}
         <div style="background: #f5f7ff; padding: 1em; border-radius: 3px;">
           <a class="internal-link" href="{{ note.url }}">{{ note.title }}</a><br>
-          <div style="font-size: 0.9em">{{ note.excerpt | strip_html | truncatewords: 20 }}</div>
         </div>
         {% endunless %}
         {% endfor %}
