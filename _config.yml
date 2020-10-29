@@ -20,7 +20,10 @@ sass:
 collections:
   notes:
     output: true
-    permalink: /:collection/:path
+    permalink: /notes/:path
+  bookshelf:
+    output: true
+    permalink: /bookshelf/:path
 
 defaults:
   - scope:
@@ -31,3 +34,7 @@ defaults:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+  - scope:
+      path: "_bookshelf/**/*.md"
+    values:
+      layout: "bookshelf"

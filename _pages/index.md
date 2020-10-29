@@ -103,5 +103,31 @@ permalink: /
       </div>
       {% endif %}
     </div>
+
+    <div class="grid-element">
+      <p><b>Bookshelf 📚</b></p>
+
+      {% assign book_limit = 3 %}
+      {% assign reviews = site.bookshelf | sort: "finished_reading_on" | reverse %}
+      {% for review in reviews limit: book_limit %}
+      {% unless review.path contains "index.md" or review.path contains "index.html" %}
+      <div class="list-entry">
+        <div><a class="internal-link" href="{{ review.url }}">{{ review.title }} ({{ review.author }})</a> <span
+            class="faded">({{ review.finished_reading_on | date: "%Y-%m-%d" }})</span></div>
+      </div>
+      {% endunless %}
+      {% endfor %}
+
+      {% assign additional_books = site.bookshelf.size | minus: book_limit | minus: 1 %}
+      {% if additional_books > 0 %}
+      <div>
+        <p>
+          <a class="internal-link" href="/bookshelf">
+            View all books ({{ additional_books }} more books)
+          </a>
+        </p>
+      </div>
+      {% endif %}
+    </div>
   </div>
 </div>
