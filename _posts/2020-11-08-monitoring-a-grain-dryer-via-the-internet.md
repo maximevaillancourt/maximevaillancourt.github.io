@@ -219,6 +219,16 @@ Now, the moment of truth: turn on the dryer. You may need to wait up to 3 minute
 
 At this point, try accessing the static IP from your favourite device. **If you did everything right, you should see the Watchdog web interface, and you're done!** 🎉
 
+### Questions and answers
+
+Q: Why didn't you just run a cable from the home to the dryer?
+
+A: Because the dryer's way too far from any building with Internet access. If only it had been so simple!
+
+Q: Why pay for a static IP? Why not dynamic DNS or IPv6? Why not TeamViewer?
+
+A: Telus (and others) do carrier-grade network address translation (CG-NAT), so there's like a double layer of NAT going on. Using a public static IP bypasses this issue. What's more, the modem itself doesn't support dynamic DNS. Additionally, the dryer's computer runs Windows CE .NET 4.2, so no IPv6 nor TeamViewer support. Heck, I even thought about installing ngrok on that thing, but Windows CE being what it is, I couldn't.
+
 ---
 
 Let's wrap this up with a pair of nostalgia-inducing visuals: it appears that these dryers run on Windows CE .NET 4.2, which was released in April 2003. Time flies!
