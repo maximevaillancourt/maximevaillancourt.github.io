@@ -49,7 +49,7 @@ To reduce the number of mindless unlocks:
 To spend quality time on the device once it's unlocked:
 
 - **Showcase useful apps on your home screen**. For example, Duolingo, podcasts, Instapaper, Anki, Calendar, etc. You get the picture: not Facebook and Twitter.
-- **Hide time-wasting apps** from the home screen. Even better, delete them altogether! A first great step sis hiding them away in a folder of some sort.
+- **Hide time-wasting apps** from the home screen. Even better, delete them altogether! A first great step is hiding them away in a folder of some sort.
 - **Enable grayscale display mode** to reduce the enticing effect of the apps icons' bright colours.
 - **Use an alternative launcher** like [Unlauncher](https://jkuester.github.io/unlauncher/). You may even customize your launcher if you're familiar with Java or Kotlin.
 
