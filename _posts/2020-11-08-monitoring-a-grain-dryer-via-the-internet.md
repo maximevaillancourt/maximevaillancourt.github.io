@@ -14,10 +14,10 @@ For context, a grain dryer is literally a combination of a huge furnace and fans
 
 <div class="img-group">
 <div class="">
-  <img alt="A GSI 1220 grain dryer next to a grain silo." src="/assets/dryer/gsi-1220.jpg">
+  <img alt="A GSI grain dryer next to a grain silo." src="/assets/dryer/gsi-1220.jpg">
 </div>
 <div class="caption">
-  A GSI 1220 grain dryer next to a grain silo. Image © <a href="https://midwestagsystems.net/">Midwest AG Systems</a>
+  A GSI grain dryer next to a grain silo. Image © <a href="https://midwestagsystems.net/">Midwest AG Systems</a>
 </div>
 </div>
 
