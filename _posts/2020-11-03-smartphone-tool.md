@@ -62,15 +62,21 @@ After these changes, screen time data for this week shows that on average I unlo
 <div style="margin: 1em 0; display: grid; grid-gap: 1em; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
   <div style="text-align: center;">
     <img alt="Lock screen on my Android smartphone, showing the current date and time" src="/assets/lockscreen.jpg"/>
-    Lock screen
+    <span class="caption">
+      Lock screen
+    </span>
   </div>
   <div style="text-align: center;">
     <img alt="Home screen on my Android smartphone, showing the current time at the top as well as buttons for four apps: a podcasts app, a spaced repetition app, a language learning app, and a calendar app" src="/assets/homescreen.jpg"/>
-    Home screen
+    <span class="caption">
+      Home screen
+    </span>
   </div>
   <div style="text-align: center;">
     <img alt="App draser on my Android smartphone, showing scrollable list of apps names in white text over black background" src="/assets/app-drawer.jpg"/>
-    App drawer
+    <span class="caption">
+      App drawer
+    </span>
   </div>
 </div>
 

@@ -90,9 +90,3 @@ As a starting point, identify existing high-quality comments in your project, an
 As the documentation shepherd on your team, always be on the lookout for opportunities to write more of those high-context code comments: you'll be rewarded for it in the future, either by your colleagues thanking you for writing those comments that helped them step up quickly, or by your boss for reducing the "onboarding load" I mentioned earlier on the rest of the team, who instead were able to focus on the task at hand.
 
 Great software documentation is like a flywheel. It's hard to write at first, and the return on investment is not immediately visible. But with time, it compounds, and eventually, you'll wonder how you managed to live without it.
-
-What are some of ways you're helping people onboard your software development team? Reply on Twitter here:
-
-<p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ramping up on a new software project is hard. It doesn&#39;t have to be.<br><br>To help newcomers, I recently added high-context code comments and tagged them using a special identifier to make it easy to find them all. 🎉<br><br>Actual examples in the post! 👇<a href="https://t.co/EivfXt7rrz">https://t.co/EivfXt7rrz</a></p>&mdash; Maxime Vaillancourt (@vaillancourtmax) <a href="https://twitter.com/vaillancourtmax/status/1288097090585993216?ref_src=twsrc%5Etfw">July 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</p>

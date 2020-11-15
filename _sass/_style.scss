@@ -1,21 +1,20 @@
-$primary-color: blue;
+$primary-color: black;
+$font-family-sans: -apple-system, BlinkMacSystemFont, Segoe UI, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 $font-family-mono: SFMono-Regular,Consolas,DejaVu Sans Mono,Liberation Mono,Menlo,monospace;
-$font-size-desktop: 14px;
-$font-size-mobile: 12px;
-
-html {
-  border-top: 5px solid $primary-color;
-}
+$font-family-serif: Iowan Old Style, Apple Garamond, Baskerville, Georgia, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji;
+$font-size-desktop: 18px;
+$font-size-mobile: 15px;
 
 body {
+  background: white;
+  color: #222;
   box-sizing: content-box;
-  font-family: $font-family-mono;
+  font-family: $font-family-sans;
   margin: 0;
   line-height: 1.7;
   padding: 2em 2em;
   overflow-x: hidden;
-  color: #333;
-  max-width: 54em;
+  max-width: 40em;
   margin: 0 auto;
   font-size: $font-size-mobile;
   @media (min-width: 820px) {
@@ -35,7 +34,6 @@ img.profile {
 
 .post-title {
   margin-bottom: 0.2em;
-  font-family: $font-family-mono !important;
 }
 
 .flex {
@@ -65,20 +63,17 @@ img.profile {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-mono;
-  font-size: $font-size-mobile;
-  @media (min-width: 820px) {
-    font-size: $font-size-desktop;
-  }
+  font-family: $font-family-sans;
   margin-top: 2em;
 }
 
 footer {
   margin: 4em 0 0.5em 0;
+  font-size: 0.8em;
 }
 
 .list-entry {
-  margin: 1em 0 1em;
+  margin: 1em 0 1.25em;
 }
 
 .spacer {
@@ -121,9 +116,11 @@ blockquote {
 }
 
 .caption {
-  color: #606060;
+  font-family: $font-family-sans;
   margin-top: 1em;
   text-align: center;
+  color: #666;
+  font-size: 0.9em;
 }
 
 hr {
@@ -143,7 +140,8 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
   color: $primary-color;
   &:hover {
     color: black !important;
