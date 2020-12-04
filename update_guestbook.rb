@@ -18,7 +18,7 @@ raw_messages_from_api = JSON.parse(HTTParty.get("https://api.netlify.com/api/v1/
 messages_from_api = {}
 raw_messages_from_api.each do |raw_message|
   messages_from_api[raw_message['id']] = {
-    'id' => raw_message['id'],
+    'netlify_submission_id' => raw_message['id'],
     'author' => CGI.escapeHTML(raw_message['name']),
     'timestamp' => DateTime.parse(raw_message['created_at']).strftime('%FT%T%:z'),
     'body' => CGI.escapeHTML(raw_message['body']),
@@ -28,7 +28,7 @@ end
 # Index existing messages by ID
 existing_messages = YAML.load(File.read('_data/guestbook_messages.yml')) || []
 existing_messages_by_id = existing_messages.each_with_object({}) do |message, existing_messages_by_id|
-  existing_messages_by_id[message['id']] = message
+  existing_messages_by_id[message['netlify_submission_id']] = message
 end
 
 # Merge messages from API with existing messages using message IDs as unique key
