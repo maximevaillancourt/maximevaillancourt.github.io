@@ -8,14 +8,18 @@ permalink: /
 
 <div>
   <div>
-    <h1 style="margin: 1em 0 0;">Hey! I'm Max.</h1>
+    <h1 style="margin: 1em 0 0;">Hello! I'm Max.</h1>
 
     <p>
-      I'm a software developer based in Canada, working on storefronts at <a target="_blank" rel="noopener" href="https://www.shopify.ca/">Shopify</a>. I care about empowering engineering teams and building software that respects people. Areas of interest include digital well-being, privacy, and sustainability.
+      I'm a software developer based in Canada, working on online storefronts at <a target="_blank" rel="noopener" href="https://www.shopify.ca/">Shopify</a>. I&nbsp;care about empowering engineering teams and building software that respects people. Areas of interest include digital well-being, privacy, and sustainability.
     </p>
 
     <p>
 I'm active on <a title='Mastodon' rel="me" target="_blank" rel="noopener" href="https://mstdn.io/@vaillancourtmax/">Mastodon</a> and <a title='Twitter' rel="me" target="_blank" rel="noopener" href="https://twitter.com/vaillancourtmax">Twitter</a> &mdash; direct messages are open!
+    </p>
+
+    <p>
+While you're here, consider taking a few minutes to <a href="/guestbook" class="internal-link">sign the guestbook</a>.  📖
     </p>
   </div>
 
