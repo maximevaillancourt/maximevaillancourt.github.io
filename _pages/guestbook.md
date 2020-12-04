@@ -6,7 +6,7 @@ permalink: /guestbook
 
 <h1>{{ page.title }} 📖</h1>
 
-That's right &mdash; just like in the early days of the Internet. A good old guestbook.
+That's right &mdash; just like in the early days of the Web. A good old guestbook.
 
 Leave a message of your own at the bottom of this page. Thanks for stopping by! 👋
 
