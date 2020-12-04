@@ -171,9 +171,9 @@ nav {
   background-color: #f2f7fb;
   padding: 1rem;
   height: 4rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards {
@@ -202,12 +202,36 @@ code, kbd, samp {
 }
 
 input, textarea {
-	margin:0;
-	border:1px solid black;
-	padding:0.5em;
-  width: 100%;
-	display:inline-block;
-	vertical-align:middle;
-	background:none;
+  margin:0;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  padding:0.5em;
+  width: calc(100% - 1em - 2px);
+  display:inline-block;
+  vertical-align:middle;
+  background: white;
   font-family: $font-family-sans;
+}
+
+.guestbook-entry {
+  padding: 1em;
+  margin: 0 -1em;
+  margin-bottom: 1em;
+  background: #f0f8ff;
+  border-radius: 4px;
+}
+
+.guestbook-entry-author {
+  margin: 0 0 0.5em;
+}
+
+.guestbook-entry-body {
+  white-space: pre-line;
+}
+
+.guestbook-signature-wrapper {
+  padding: 0.5em 1em;
+  margin: 1.5em -1em;
+  background: #fff4eb;
+  border-radius: 4px;
 }
