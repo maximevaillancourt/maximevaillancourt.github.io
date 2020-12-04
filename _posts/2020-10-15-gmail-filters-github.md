@@ -124,5 +124,3 @@ Open up your Gmail settings, and click on the "Filters" tab. Once you're there, 
 That's it - you're done. At this point, your emails should be labeled automatically. Feel free to change the colors of the labels via the "Labels" tab in your Gmail settings. I find it helpful to make <span style="color: #e30000;">direct review requests</span> red as this means "urgent and important" to me, and the label for <span style="color: green;">merged pull requests</span> is green because it means "success, everything's good" to me.
 
 Experiment to find what works best for you.
-
-If you found this helpful, consider sharing it with your coworkers and friends. I'm always available on Twitter ([@vaillancourtmax](https://twitter.com/vaillancourtmax)) to discuss. ✌️

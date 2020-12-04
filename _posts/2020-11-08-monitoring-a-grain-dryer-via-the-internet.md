@@ -236,7 +236,3 @@ Let's wrap this up with a pair of nostalgia-inducing visuals: it appears that th
 ![Welcome screen on the dryer's touchscreen featuring a Windows 95-era logo](/assets/dryer/ui.jpg)
 
 ![Windows CE .NET 4.2 sticker behind the computer panel](/assets/dryer/windows-ce.jpg)
-
----
-
-Questions? Comments? Suggestions? Reach out on [Mastodon](mstdn.io/@vaillancourtmax) or [Twitter](https://twitter.com/vaillancourtmax)!
