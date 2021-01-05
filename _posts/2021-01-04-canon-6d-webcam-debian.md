@@ -2,7 +2,7 @@
 title: Using a Canon DSLR as a webcam with Debian/Ubuntu
 layout: post
 slug: "canon-dslr-webcam-debian-ubuntu"
-excerpt: No EOS Utility on Linux? No problem!
+excerpt: No EOS Webcam Utility on Linux? No problem!
 ---
 
 The following was tested with a Canon EOS 6D and a ThinkPad X220 running Debian 10 Buster on Linux Kernel 4.19.0-9-amd64. Your mileage may vary depending on your particular configuration, but I expect this to work on a wide range of Canon DSLRs and other Linux distributions.
