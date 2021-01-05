@@ -21,6 +21,8 @@ Then, we need to enable the v4l2 kernel module.
 $ sudo modprobe v4l2loopback
 ```
 
+Reboot your machine, then jump to step 2.
+
 **2. Connect your camera**
 
 Use the Mini-USB to USB-A cable to connect the DSLR to your computer. Then, turn the camera on, and make sure it's dialed to Photo mode (in Photo mode, I'm able to get ~20fps, but in Video mode, I barely get 4fps).
