@@ -1,8 +1,8 @@
 ---
-title: "Simplify, batch, and cache: accelerating storefront rendering at Shopify"
+title: "Optimizing server-side storefront rendering at Shopify"
 layout: post
-slug: "simplify-batch-cache-accelerating-storefront-rendering-shopify"
-excerpt: A technical overview of server-side rendering optimizations.
+slug: "optimizing-server-side-storefront-rendering-shopify"
+excerpt: "Simplify, batch, and cache."
 image: "https://cdn.shopify.com/s/files/1/0779/4361/articles/bikes-take-the-turn.jpg?v=1607626795&width=1024"
 canonical_url: "https://shopify.engineering/simplify-batch-cache-optimized-server-side-storefront-rendering"
 ---
@@ -62,7 +62,7 @@ _This post [originally appeared on the Shopify Engineering blog](https://shopify
 <h3>Liquid object memoizer</h3>
 <p>Thanks to the Liquid templating language, merchants and partners may build custom storefront themes. When loading a particular storefront page, it’s possible that the Liquid template to render includes multiple references to the same object. This is common on the product page for example, where the template will include many references to the product object: {% raw %}<code>{{&nbsp;product.title&nbsp;}}</code>, <code>{{&nbsp;product.description&nbsp;}}</code>, <code>{{&nbsp;product.featured_media&nbsp;}}</code>, and others.{% endraw %}</p>
 <p>Of course, when each of these are executed, we don’t fetch the product over and over again from the database—we fetch it once, then keep it in memory for later use throughout the request lifecycle. This means that if the same product object is required multiple times at different locations during the render process, we’ll always use the same one and only instance of it throughout the entire request lifecycle.</p>
-<p>The Liquid object memoizer is especially useful when multiple different Liquid objects end up loading the same resource. For example, when loading multiple product objects on a collection page using <code>{{ collection.products }}</code> and then referring to a particular product using <code>{{ all_products[‘cowboy-hat’] }}</code> on a collection page, with the Liquid object memoizer we’ll load it from an external data store once, then store it in memory and fetch it from there if it’s needed later. On average, across all Shopify storefronts, we see that the Liquid object memoizer prevents between 16 and 20 accesses to Redis and/or MySQL for every single storefront request, where we leverage the in-memory cache instead. In some extreme cases, we see that the memoizer prevents up to 4,000 calls to data stores per request.</p>
+<p>The Liquid object memoizer is especially useful when multiple different Liquid objects end up loading the same resource. For example, when loading multiple product objects on a collection page using <code>{{ collection.products }}</code> and then referring to a particular product using {% raw %}<code>{{ all_products['cowboy-hat'] }}</code>{% endraw %} on a collection page, with the Liquid object memoizer we’ll load it from an external data store once, then store it in memory and fetch it from there if it’s needed later. On average, across all Shopify storefronts, we see that the Liquid object memoizer prevents between 16 and 20 accesses to Redis and/or MySQL for every single storefront request, where we leverage the in-memory cache instead. In some extreme cases, we see that the memoizer prevents up to 4,000 calls to data stores per request.</p>
 <h2>Reducing memory allocations</h2>
 <h3>Writing memory-aware code</h3>
 <p>Garbage collection execution is expensive. So we write code that doesn’t generate unnecessary objects. Use of methods and algorithms that modify objects in place, instead of generating a new object. For example:</p>
