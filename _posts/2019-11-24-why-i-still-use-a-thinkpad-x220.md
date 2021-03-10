@@ -10,6 +10,8 @@ image: /assets/x220-full.png
 
 **Update (2020-05-18)**: I've since switched to a more powerful desktop computer for my photography business. I still use the X220 as a dedicated machine to connect with Zwift, a social cycling app. 🚴
 
+**Update (2021-01-17)**: ... and I'm back on the X220 full-time! I sold the desktop computer mentioned above. I much prefer the X220's portability compared to the desktop's raw power.
+
 ---
 
 My personal machine is a 8-year-old Lenovo ThinkPad X220 running Ubuntu 18.04 with i3wm.
