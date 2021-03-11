@@ -5,6 +5,7 @@ enforce_ssl:         maximevaillancourt.com
 baseurl:             ""
 include:             ['_pages']
 exclude:             ['_includes/notes_graph.json']
+author:              Maxime Vaillancourt
 
 permalink:           /blog/:slug
 relative_permalinks: false
