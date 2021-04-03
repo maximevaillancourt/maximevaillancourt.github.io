@@ -16,7 +16,9 @@ The end result will look similar to this:
 
 ![](https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png)
 
-If you happen to use Obsidian to work on your notes, you'll likely want to open [this guide from Mike](https://refinedmind.co/obsidian-jekyll-workflow) and read through it in parallel with this one.
+If you happen to use **Obsidian** to work on your notes, you'll likely want to open [this guide from Mike](https://refinedmind.co/obsidian-jekyll-workflow) and read through it in parallel with this one.
+
+Alternatively, if you use **Roam** and would like to automatically convert your Roam Research backup to a garden using this template, take a look at [this repository](https://github.com/DoomHammer/roam-to-git/tree/roam-to-garden).
 
 Without further ado, let's get started!
 
