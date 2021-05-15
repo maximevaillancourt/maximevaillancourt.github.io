@@ -1,7 +1,7 @@
 ---
-title: Why I still use a ThinkPad X220 in 2019
+title: Why I still use a ThinkPad X220 in 2021
 layout: post
-slug: "why-i-use-a-thinkpad-x220-in-2019"
+slug: "why-i-use-a-thinkpad-x220-in-2021"
 redirect_from:
   - "/why-i-use-a-thinkpad-x220-in-2019"
 excerpt: Extensibility, compatibility, and reliability.
@@ -42,7 +42,7 @@ It's not pretty. It's not particularly fast. But it does everything I need, and 
 
 * * *
 
-I strongly believe a Lenovo ThinkPad X220 is still a terrific laptop to use in 2019 and beyond. It's not for everyone, but the X220 definitely sparks joy. Plus, its accessible price point makes it almost impossible to ignore. I got mine second-hand (third-hand? fourth-hand? I don't even know) in great condition for less than 200$ in Canada.
+I strongly believe a Lenovo ThinkPad X220 is still a terrific laptop to use in 2021 and beyond. It's not for everyone, but the X220 definitely sparks joy. Plus, its accessible price point makes it almost impossible to ignore. I got mine second-hand (third-hand? fourth-hand? I don't even know) in great condition for less than 200$ in Canada.
 
 In practical terms: the X220 plays 1080p videos from YouTube wonderfully, renders Portal 2 quite happily (albeit with lower graphics quality than what you may usually enjoy on higher-end machines), and is a perfect machine to dual boot Windows on for maximum value. I spend most of my time in a Web browser or CLI tools, so it's not like I'm running complex simulations, but still.
 
