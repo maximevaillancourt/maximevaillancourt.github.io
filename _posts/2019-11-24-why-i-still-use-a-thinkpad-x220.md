@@ -4,6 +4,7 @@ layout: post
 slug: "why-i-use-a-thinkpad-x220-in-2021"
 redirect_from:
   - "/why-i-use-a-thinkpad-x220-in-2019"
+  - "/blog/why-i-use-a-thinkpad-x220-in-2019"
 excerpt: Extensibility, compatibility, and reliability.
 image: /assets/x220-full.png
 ---
